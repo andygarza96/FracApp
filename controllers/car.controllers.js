@@ -1,5 +1,5 @@
 //this is the controller for everything that a is related to a car
-const CarModel = require("../models/car/car.model");
+const CarModel = require("../models/car.model");
 const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
 
@@ -30,26 +30,6 @@ exports.getCarById = asyncHandler(async (req, res, next) => {
     }
 });
 
-//TODO:Hacer que se puedan agregar las nuevas entradas
-/*Updates one car by its Id, it handles error and non existing Ids
-and sends a message with the error back.
-With this controller we can also add the comments*/
-exports.updateCar = asyncHandler(async (req, res, next) => {
-    // let newtitle = req.body.title;
-
-    const updatedCar = await CarModel.findByIdAndUpdate(
-        req.params.carId, {
-
-        }
-        //TODO AGREGAR entradas
-    );
-    if (updatedCar) {
-        res.status(200).json(updatedCar);
-    } else {
-        res.status(404).send();
-    }
-
-});
 /*this is to delete a car by its Id, it handles errors,
  catch non existing Ids and sends a message with the error back*/
 exports.deleteCar = asyncHandler(async (req, res, next) => {

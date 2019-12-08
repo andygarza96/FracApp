@@ -2,7 +2,6 @@
 const HouseModel = require("../models/house/house.model");
 const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
-const Neighborhood = require('../models/neighborhood/neighborhood.model');
 
 /*Creates one house and catch if there is data missing ot data errors
 and sends a message with the error back*/
@@ -13,20 +12,9 @@ exports.createHouse = asyncHandler(async (req, res, next) => {
 /*Gets all houses and catch if there is an error 
 and sends a message with the error back*/
 exports.getHouses = asyncHandler(async (req, res, next) => {
-    if (req.params.neighborhoodId) {
-        const allHouses = await HouseModel.find({
-            neighborhood: req.params.neighborhoodId
-        });
-        return res
-            .status(200)
-            .json({
-                success: true,
-                count: allHouses.length,
-                data: allHouses
-            });
-    } else {
-        res.status(200).json(res.advancedResults);
-    }
+    res
+        .status(200)
+        .json(res.advancedResults);
 });
 
 
@@ -45,8 +33,7 @@ exports.getHouseById = asyncHandler(async (req, res, next) => {
 
 
 /*Updates one house by its Id, it handles error and non existing Ids
-and sends a message with the error back.
-With this controller we can also add the comments*/
+and sends a message with the error back.*/
 exports.updateHouse = asyncHandler(async (req, res, next) => {
     let newtelephone = req.body.telephone;
     let newowner = req.body.owner;
@@ -62,7 +49,48 @@ exports.updateHouse = asyncHandler(async (req, res, next) => {
             inDebt: newinDebt
         }
     );
-    //TODO agregar pagos y residentes
+    if (updatedHouse) {
+        res.status(200).json(updatedHouse);
+    } else {
+        res.status(404).send();
+    }
+
+});
+//TODO 
+/*Adds a payment to its house*/
+exports.addPayment = asyncHandler(async (req, res, next) => {
+    let newtelephone = req.body.telephone;
+    let newowner = req.body.owner;
+    let newcelphone = req.body.celphone;
+    let newstatus = req.body.status;
+    let newinDebt = req.body.inDebt;
+    const updatedHouse = await HouseModel.findByIdAndUpdate(
+        req.params.houseId, {
+            telephone: newtelephone,
+            owner: newowner,
+            celphone: newcelphone,
+            status: newstatus,
+            inDebt: newinDebt
+        }
+    );
+    if (updatedHouse) {
+        res.status(200).json(updatedHouse);
+    } else {
+        res.status(404).send();
+    }
+
+});
+//TODO
+/*Adds a Resident to its house*/
+exports.addResident = asyncHandler(async (req, res, next) => {
+
+    let newpayments = this.payments.push(req.body.payments);
+    const updatedHouse = await HouseModel.findByIdAndUpdate(
+        req.params.houseId, {
+
+            payments: newpayments
+        }
+    );
     if (updatedHouse) {
         res.status(200).json(updatedHouse);
     } else {

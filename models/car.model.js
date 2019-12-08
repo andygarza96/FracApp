@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const EntryLogSchema = require('./entryLogs.model');
 
 const CarSchema = new mongoose.Schema({
     licensePlate: {
@@ -23,14 +22,20 @@ const CarSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    entries: {
-        type: [EntryLogSchema],
-        required: [true, "Please enter driver and house"]
-    }
+    house: {
+        type: Number,
+        enum: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+        required: true
+
+    },
+    timeOfEntry: {
+        type: Date,
+        required: true,
+        default: Date.now,
+    },
 });
 
 const CarModel = mongoose.model("Cars", CarSchema);
-//TODO al registrar un auto si no tiene entrada te lo registra vacio y no deberia tambien lo crea aun que el conductor o la casa no exista
 
 
 module.exports = CarModel;

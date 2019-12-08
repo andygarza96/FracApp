@@ -4,11 +4,6 @@ const ResidentSchema = require("./resident.model");
 var ObjectId = mongoose.Schema.Types.ObjectId;
 
 const HouseSchema = new mongoose.Schema({
-    neighborhood: {
-        type: ObjectId,
-        ref: "Neighborhood",
-        required: true
-    },
     houseNumber: {
         type: String,
         required: true,
@@ -20,14 +15,6 @@ const HouseSchema = new mongoose.Schema({
     },
     telephone: {
         type: Number
-    },
-    owner: {
-        type: String,
-        required: true
-    },
-    celphone: {
-        type: Number,
-        required: true
     },
     status: {
         type: String,

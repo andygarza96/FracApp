@@ -15,6 +15,12 @@ const NewsSchema = new mongoose.Schema({
     details: {
         type: String
     },
+    date: {
+        type: Date,
+        default: Date.now,
+        required: true
+
+    },
     deleted: {
         type: Boolean,
         required: true,
@@ -22,4 +28,6 @@ const NewsSchema = new mongoose.Schema({
     }
 });
 
-module.exports = NewsSchema;
+const NewsModel = mongoose.model("News", NewsSchema);
+
+module.exports = NewsModel;

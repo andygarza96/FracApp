@@ -38,12 +38,6 @@ const ResidentSchema = new mongoose.Schema({
         type: String,
         enum: ['F', 'M'],
         required: true
-    },
-    delete: {
-        type: Boolean,
-        required: true,
-        default: false
-
     }
 
 });

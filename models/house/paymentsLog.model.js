@@ -8,15 +8,7 @@ const PaymentLogsSchema = new mongoose.Schema({
     reason: {
         type: String,
         required: true
-
-    },
-    timeOfPayment: {
-        //TODO timestamp para la hora y dia de pago
-        type: Date,
-        default: Date.now,
-
-    },
-
+    }
 });
 
 module.exports = PaymentLogsSchema;

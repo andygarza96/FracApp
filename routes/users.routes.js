@@ -20,7 +20,7 @@ const {
 } = require('../middleware/auth');
 
 router.use(protect);
-router.use(authorize('admin'));
+router.use(authorize('user'));
 
 router
   .route('/')
