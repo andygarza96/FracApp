@@ -21,10 +21,8 @@ const NewsSchema = new mongoose.Schema({
         required: true
 
     },
-    deleted: {
-        type: Boolean,
-        required: true,
-        defaulte: false
+    house: {
+        type: ObjectId
     }
 });
 

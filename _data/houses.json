@@ -1,0 +1,310 @@
+[{
+    "inDebt": false,
+    "_id": "5ded68af70aad948c202af67",
+    "houseNumber": 1,
+    "street": "Real de minas",
+    "telephone": 2145876,
+    "status": "En Renta",
+    "residents": [
+
+    ],
+    "payments": [{
+        "amount": 300,
+        "reason": "September",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "October",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "November",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }],
+    "__v": 0
+}, {
+    "inDebt": false,
+    "_id": "5ded6992627f1648d07457c9",
+    "houseNumber": 2,
+    "street": "Real de minas",
+    "telephone": 2167898,
+    "status": "Habitada",
+    "residents": [{
+        "_id": "5ded73be9675c84a08d8e0dc",
+        "name": "Andrea",
+        "FLastName": "Garza",
+        "MLastName": "Berrones",
+        "age": 23,
+        "email": "andrea_berrones@gmail.com",
+        "celphone": 6142338765.0,
+        "sex": "F"
+    }, {
+        "_id": "5ded73be9675c84a08d8e0dc",
+        "name": "Luis Angel",
+        "FLastName": "Ortega",
+        "age": 23,
+        "email": "luisortega@gmail.com",
+        "celphone": 6142338765.0,
+        "sex": "M"
+    }],
+    "payments": [{
+        "amount": 300,
+        "reason": "September",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "October",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "November",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }],
+    "__v": 0
+}, {
+    "inDebt": false,
+    "_id": "5ded69be627f1648d07457ca",
+    "houseNumber": 3,
+    "street": "Real de minas",
+    "telephone": 21467808,
+    "status": "Deshabitada",
+    "residents": [],
+    "payments": [{
+        "amount": 300,
+        "reason": "September",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "October",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "November",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }],
+    "__v": 0
+}, {
+    "inDebt": true,
+    "_id": "5ded69e9627f1648d07457cb",
+    "houseNumber": 4,
+    "street": "Real de minas",
+    "telephone": 21467678,
+    "status": "En Venta",
+    "residents": [{
+        "_id": "5ded73be9675c84a08d8e0dc",
+        "name": "Diana",
+        "FLastName": "Lopez",
+        "MLastName": "Mendiolea",
+        "age": 69,
+        "email": "diana_Lopez@gmail.com",
+        "celphone": 6142338765.0,
+        "sex": "F"
+    }, {
+        "_id": "5ded73be9675c84a08d8e0dc",
+        "name": "Juan",
+        "FLastName": "Garza",
+        "MLastName": "Mzrtinez",
+        "age": 29,
+        "email": "martinez@gmail.com",
+        "celphone": 6142338765.0,
+        "sex": "F"
+    }],
+    "payments": [{
+        "amount": 300,
+        "reason": "September",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "October",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }],
+    "__v": 0
+}, {
+    "inDebt": true,
+    "_id": "5ded6a0a627f1648d07457cc",
+    "houseNumber": 5,
+    "street": "Real de minas",
+    "telephone": 21435678,
+    "status": "Rentada",
+    "residents": [{
+        "name": "Adrian",
+        "FLastName": "Garcia",
+        "age": 50,
+        "email": "adrian@gmail.com",
+        "celphone": 6142338765.0,
+        "sex": "M"
+    }],
+    "payments": [{
+        "amount": 300,
+        "reason": "September",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }],
+    "__v": 0
+}, {
+    "inDebt": false,
+    "_id": "5ded6a48627f1648d07457cd",
+    "houseNumber": 6,
+    "street": "Real de minas",
+    "telephone": 21458365,
+    "status": "Rentada",
+    "residents": [{
+        "_id": "5ded73be9675c84a08d8e0dc",
+        "name": "Antonio",
+        "FLastName": "Hernandez",
+        "MLastName": "Molina",
+        "age": 35,
+        "email": "antoniomolina@gmail.com",
+        "celphone": 6142338765.0,
+        "sex": "M"
+    }, {
+        "_id": "5ded73be9675c84a08d8e0dc",
+        "name": "Valeria",
+        "FLastName": "Hernandez",
+        "MLastName": "Valenzuela",
+        "sex": "F"
+    }, {
+        "_id": "5ded73be9675c84a08d8e0dc",
+        "name": "Andrea",
+        "FLastName": "Valenzuela",
+        "MLastName": "Porras",
+        "age": 28,
+        "email": "andrea_valenzuela@gmail.com",
+        "celphone": 6142338765.0,
+        "sex": "F"
+    }],
+    "payments": [{
+        "amount": 300,
+        "reason": "September",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "October",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "November",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }],
+    "__v": 0
+}, {
+    "inDebt": false,
+    "_id": "5ded6a84627f1648d07457ce",
+    "houseNumber": 7,
+    "street": "Real de minas",
+    "telephone": 4145478,
+    "status": "Deshabitada",
+    "residents": [],
+    "payments": [{
+        "amount": 300,
+        "reason": "September",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "October",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "November",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }],
+    "__v": 0
+}, {
+    "inDebt": false,
+    "_id": "5ded6af3627f1648d07457cf",
+    "houseNumber": 8,
+    "street": "Real de minas",
+    "telephone": 4149853,
+    "status": "En Renta",
+    "residents": [],
+    "payments": [{
+        "amount": 300,
+        "reason": "September",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "October",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "November",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }],
+    "__v": 0
+}, {
+    "inDebt": false,
+    "_id": "5ded6b7b627f1648d07457d0",
+    "houseNumber": 9,
+    "street": "Real de minas",
+    "telephone": 3145789,
+    "status": "Habitada",
+    "residents": [{
+        "_id": "5ded73be9675c84a08d8e0dc",
+        "name": "Pamela",
+        "FLastName": "Burciaga",
+        "MLastName": "Andujo",
+        "age": 35,
+        "email": "pamela@gmail.com",
+        "celphone": 6142338765.0,
+        "sex": "F"
+    }],
+    "payments": [{
+        "amount": 300,
+        "reason": "September",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "October",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "November",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }],
+    "__v": 0
+}, {
+    "inDebt": false,
+    "_id": "5ded6bbb627f1648d07457d1",
+    "houseNumber": 10,
+    "street": "Real de minas",
+    "telephone": 4123564,
+    "status": "En Venta",
+    "residents": [],
+    "payments": [{
+        "amount": 300,
+        "reason": "September",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "October",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }, {
+        "amount": 300,
+        "reason": "November",
+        "_id": "5ded798822a13e4b150e9030",
+        "timeOfPayment": "2019-12-08T22:30:32.409Z"
+    }],
+    "__v": 0
+}]

@@ -5,11 +5,7 @@ const jwt = require("jsonwebtoken");
 var ObjectId = mongoose.Schema.Types.ObjectId;
 
 const UserSchema = new mongoose.Schema({
-  neighborhood: {
-    type: ObjectId,
-    ref: "Neighborhood",
-    required: true
-  },
+
   name: {
     type: String,
     required: [true, "Please add a name"]
@@ -25,7 +21,7 @@ const UserSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ["user", "guard", "FracAdmin"],
+    enum: ["user"],
     default: "user"
   },
   password: {

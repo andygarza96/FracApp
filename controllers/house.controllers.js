@@ -6,9 +6,13 @@ const asyncHandler = require('../middleware/async');
 /*Creates one house and catch if there is data missing ot data errors
 and sends a message with the error back*/
 exports.createHouse = asyncHandler(async (req, res, next) => {
+    console.log(req.body);
+
     const createdModel = await HouseModel.create(req.body);
     res.status(201).json(createdModel);
 });
+
+
 /*Gets all houses and catch if there is an error 
 and sends a message with the error back*/
 exports.getHouses = asyncHandler(async (req, res, next) => {
@@ -59,43 +63,65 @@ exports.updateHouse = asyncHandler(async (req, res, next) => {
 //TODO 
 /*Adds a payment to its house*/
 exports.addResident = asyncHandler(async (req, res, next) => {
-    let newtelephone = req.body.telephone;
-    let newowner = req.body.owner;
-    let newcelphone = req.body.celphone;
-    let newstatus = req.body.status;
-    let newinDebt = req.body.inDebt;
-    const updatedHouse = await HouseModel.findByIdAndUpdate(
-        req.params.houseId, {
-            telephone: newtelephone,
-            owner: newowner,
-            celphone: newcelphone,
-            status: newstatus,
-            inDebt: newinDebt
+    const houseModel = await HouseModel.findById(req.params.houseId);
+
+    if (houseModel) {
+
+        let newValue = req.body.residents;
+        let newArray = houseModel.residents;
+
+        console.log(typeof newValue);
+        newArray.push(newValue);
+
+        const updatedHouse = await HouseModel.findByIdAndUpdate(
+            req.params.houseId, {
+
+                residents: newArray
+            }
+        );
+        if (updatedHouse) {
+            res.status(200).json(updatedHouse);
+        } else {
+            res.status(404).send();
         }
-    );
-    if (updatedHouse) {
-        res.status(200).json(updatedHouse);
+
+
     } else {
-        res.status(404).send();
+        return next(new ErrorResponse(`House not found with id of ${req.params.houseId}`, 404));
     }
+
 
 });
 //TODO
-/*Adds a Resident to its house*/
+/*Adds a Payment to its house*/
 exports.addPayments = asyncHandler(async (req, res, next) => {
+    const houseModel = await HouseModel.findById(req.params.houseId);
 
-    let newpayments = this.payments.push(req.body.payments);
-    const updatedHouse = await HouseModel.findByIdAndUpdate(
-        req.params.houseId, {
+    if (houseModel) {
 
-            payments: newpayments
+        let newValue = req.body.payments;
+        let newArray = houseModel.payments;
+
+        console.log(typeof newValue);
+        newArray.push(newValue);
+
+        const updatedHouse = await HouseModel.findByIdAndUpdate(
+            req.params.houseId, {
+
+                payments: newArray
+            }
+        );
+        if (updatedHouse) {
+            res.status(200).json(updatedHouse);
+        } else {
+            res.status(404).send();
         }
-    );
-    if (updatedHouse) {
-        res.status(200).json(updatedHouse);
+
+
     } else {
-        res.status(404).send();
+        return next(new ErrorResponse(`House not found with id of ${req.params.houseId}`, 404));
     }
+
 
 });
 /*this is to delete a house by its Id, it handles errors,

@@ -19,12 +19,10 @@ const ResidentSchema = new mongoose.Schema({
     },
     age: {
         type: Number,
-        required: true,
     },
     email: {
         type: String,
         required: false,
-        unique: true,
         match: [
             /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
             'Please add a valid email'

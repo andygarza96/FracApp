@@ -5,7 +5,8 @@ var ObjectId = mongoose.Schema.Types.ObjectId;
 
 const HouseSchema = new mongoose.Schema({
     houseNumber: {
-        type: String,
+        type: Number,
+        enum: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
         required: true,
         unique: true
     },
@@ -18,7 +19,7 @@ const HouseSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ["Rented", "On Sale", "Inhabited", "uninhabited", "On Rent"],
+        enum: ["Rentada", "En Venta", "En Renta", "Habitada", "Deshabitada"],
         required: true
     },
     inDebt: {
@@ -27,10 +28,12 @@ const HouseSchema = new mongoose.Schema({
         default: false
     },
     residents: {
-        type: [ResidentSchema]
+        type: [ResidentSchema],
+        required: true
     },
     payments: {
-        type: [PaymentLogSchema]
+        type: [PaymentLogSchema],
+        required: true
     }
 });
 
