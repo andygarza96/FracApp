@@ -58,7 +58,7 @@ exports.updateHouse = asyncHandler(async (req, res, next) => {
 });
 //TODO 
 /*Adds a payment to its house*/
-exports.addPayment = asyncHandler(async (req, res, next) => {
+exports.addResidents = asyncHandler(async (req, res, next) => {
     let newtelephone = req.body.telephone;
     let newowner = req.body.owner;
     let newcelphone = req.body.celphone;
@@ -82,7 +82,7 @@ exports.addPayment = asyncHandler(async (req, res, next) => {
 });
 //TODO
 /*Adds a Resident to its house*/
-exports.addResident = asyncHandler(async (req, res, next) => {
+exports.addPayments = asyncHandler(async (req, res, next) => {
 
     let newpayments = this.payments.push(req.body.payments);
     const updatedHouse = await HouseModel.findByIdAndUpdate(

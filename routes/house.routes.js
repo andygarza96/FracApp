@@ -15,8 +15,8 @@ router.post("/", protect, authorize('user'), houseController.createHouse);
 router.get("/", protect, authorize('user'), advancedResults(houseModel), houseController.getHouses);
 router.get("/:houseId", protect, authorize('user'), houseController.getHouseById);
 router.put("/:houseId", protect, authorize('user'), houseController.updateHouse);
-router.put("/:houseId", protect, authorize('user'), houseController.addResident);
-router.put("/:houseId", protect, authorize('user'), houseController.addPayment);
+router.put("/:houseId/residents", protect, authorize('user'), houseController.addResident);
+router.put("/:houseId/payments", protect, authorize('user'), houseController.addPayment);
 router.delete("/:houseId", protect, authorize('user'), houseController.deleteHouse);
 
 module.exports = router;
