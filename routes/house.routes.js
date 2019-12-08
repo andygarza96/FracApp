@@ -16,7 +16,7 @@ router.get("/", protect, authorize('user'), advancedResults(houseModel), houseCo
 router.get("/:houseId", protect, authorize('user'), houseController.getHouseById);
 router.put("/:houseId", protect, authorize('user'), houseController.updateHouse);
 router.put("/:houseId/residents", protect, authorize('user'), houseController.addResident);
-router.put("/:houseId/payments", protect, authorize('user'), houseController.addPayment);
+router.put("/:houseId/payments", protect, authorize('user'), houseController.addPayments);
 router.delete("/:houseId", protect, authorize('user'), houseController.deleteHouse);
 
 module.exports = router;

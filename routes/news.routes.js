@@ -3,8 +3,6 @@ const express = require("express");
 const newsController = require("../controllers/news.controllers");
 const newsModel = require("../models/news.model");
 
-//Include other resources routers
-const courseRouter = require('./house.routes');
 
 const router = express.Router();
 
