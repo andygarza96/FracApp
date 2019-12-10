@@ -1,10 +1,8 @@
 {
-    "neighborhood": "5de8db58809de926c7436bd1",
-    "houseNumber": 2,
-    "street": "Real de minas",
-    "telephone": 2145876,
-    "owner": "Luis Perez",
-    "celphone": 6146754576,
-    "status": "On Rent",
-    "inDebt": false
+    "name": "Oatmeal",
+    "description": "Delicious Oatmeal with blueberries",
+    "category": ["Breakfast"],
+    "image": "image-url",
+    "ingredients": ["1/4 a cup of Oatmeal", "1/2 a cup of milk", "sugar to taste", "Pinch of salt", "blueberries to taste"],
+    "instructions": ["First you put the milk on the stove", "Second you put the oatmeal", "add sugar and salt "]
 }

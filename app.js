@@ -41,7 +41,6 @@ app.use("/houses", houseRoutes);
 app.use("/auth", authRoutes);
 app.use("/user", userRoutes);
 
-////////////////////////////NI P I DE QUE
 
 // Cookie parser
 app.use(cookieParser());

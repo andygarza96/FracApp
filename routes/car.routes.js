@@ -11,10 +11,10 @@ const {
     authorize
 } = require('../middleware/auth');
 
-router.post("/", /* protect, authorize('user'),*/ carController.createCar);
-router.get("/", /*protect, authorize('user'),*/ advancedResults(carModel), carController.getCars);
-router.get("/:carId", /* protect, authorize('user'),*/ carController.getCarById);
-router.delete("/:carId", /* protect, authorize('user'),*/ carController.deleteCar);
+router.post("/", carController.createCar);
+router.get("/", advancedResults(carModel), carController.getCars);
+router.get("/:carId", carController.getCarById);
+router.delete("/:carId", carController.deleteCar);
 
 
 module.exports = router;

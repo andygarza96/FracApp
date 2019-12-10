@@ -60,8 +60,7 @@ exports.updateHouse = asyncHandler(async (req, res, next) => {
     }
 
 });
-//TODO 
-/*Adds a payment to its house*/
+/*Adds a resident to its house*/
 exports.addResident = asyncHandler(async (req, res, next) => {
     const houseModel = await HouseModel.findById(req.params.houseId);
 
@@ -92,7 +91,6 @@ exports.addResident = asyncHandler(async (req, res, next) => {
 
 
 });
-//TODO
 /*Adds a Payment to its house*/
 exports.addPayments = asyncHandler(async (req, res, next) => {
     const houseModel = await HouseModel.findById(req.params.houseId);
