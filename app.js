@@ -34,14 +34,6 @@ mongodb.connect();
 //body parser
 app.use(express.json());
 
-//Routes
-app.use("/cars", carRoutes);
-app.use("/news", newsRoutes);
-app.use("/houses", houseRoutes);
-app.use("/auth", authRoutes);
-app.use("/user", userRoutes);
-
-
 // Cookie parser
 app.use(cookieParser());
 
@@ -84,5 +76,13 @@ process.on("unhandledRejection", (err, promise) => {
     //     // Close server & exit process
     //     // server.close(() => process.exit(1));
 });
+
+//Routes
+app.use("/cars", carRoutes);
+app.use("/news", newsRoutes);
+app.use("/houses", houseRoutes);
+app.use("/auth", authRoutes);
+app.use("/user", userRoutes);
+
 
 module.exports = app;
