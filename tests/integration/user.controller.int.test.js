@@ -16,10 +16,6 @@ describe(endpointUrl, () => {
         const response = await request(app).get(endpointUrl);
 
         expect(response.statusCode).toBe(200);
-        // expect(response.body[0].name).toBeDefined();
-        // expect(response.body[0].role).toBeDefined();
-        // expect(response.body[0].email).toBeDefined();
-        // expect(response.body[0].password).toBeDefined();
     });
 
 

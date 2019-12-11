@@ -41,13 +41,6 @@ describe(endpointUrl, () => {
         const response = await request(app).get(endpointUrl);
 
         expect(response.statusCode).toBe(200);
-        // expect(Array.isArray(response.body)).toBeTruthy();
-        // expect(response.body[0].licensePlate).toBeDefined();
-        // expect(response.body[0].color).toBeDefined();
-        // expect(response.body[0].year).toBeDefined();
-        // expect(response.body[0].brand).toBeDefined();
-        // expect(response.body[0].model).toBeDefined();
-        // expect(response.body[0].house).toBeDefined();
 
     });
 

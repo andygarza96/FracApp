@@ -1,38 +1,33 @@
 const request = require("supertest");
 const app = require("../../app");
-const newNews = require("../mock-data/new-news.json");
+const newUser = require("../mock-data/new-user.json");
+const loginUser = require("../mock-data/loginUser.json");
 
-const endpointUrl = "/news/";
+const endpointUrl = "/auth/";
+const endpointUrlRe = "/auth/register";
+const endpointUrlLo = "/auth/login";
 
 //We set all the variables that are necessary for each test
 
 
 
 describe(endpointUrl, () => {
-    /*it checks that when you create a news all the values are store,
-    that we send a succeful response back when the new news is created and
+    /*it checks that when you create a user all the values are store,
+    that we send a succeful response back when the new user is created and
     that we get the JSON back */
-    it("POST" + endpointUrl, async () => {
+    it("POST" + endpointUrlRe, async () => {
         const response = await request(app)
-            .post(endpointUrl)
-            .send(newNews);
-        expect(response.body.title).toBe(newNews.title);
-        expect(response.body.description).toBe(newNews.description);
-        expect(response.body.details).toStrictEqual(newNews.details);
-        expect(response.body.date).toBe(newNews.date);
-        //we asign the values to our variable so we can test the delete and update
-        newNewsId = response.body._id;
+            .post(endpointUrlRe)
+            .send(newUser);
+        expect(response.statusCode).toBe(200);
+
     });
 
-    // //Test to get all newss
-    test("GET " + endpointUrl, async () => {
-        const response = await request(app).get(endpointUrl);
+    // //Test to get all users
+    test("Post " + endpointUrlLo, async () => {
+        const response = await request(app).post(endpointUrlLo).send(loginUser);
 
         expect(response.statusCode).toBe(200);
-        // expect(response.body[0].title).toBeDefined();
-        // expect(response.body[0].description).toBeDefined();
-        // expect(response.body[0].details).toBeDefined();
-        // expect(response.body[0].date).toBeDefined();
     });
 
 

@@ -29,10 +29,7 @@ describe(endpointUrl, () => {
         const response = await request(app).get(endpointUrl);
 
         expect(response.statusCode).toBe(200);
-        // expect(response.body[0].title).toBeDefined();
-        // expect(response.body[0].description).toBeDefined();
-        // expect(response.body[0].details).toBeDefined();
-        // expect(response.body[0].date).toBeDefined();
+
     });
 
 
