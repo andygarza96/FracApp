@@ -9,13 +9,32 @@ const endpointUrl = "/houses/";
 const testHouse = {
 
     "inDebt": false,
-    "houseNumber": 10,
     "street": "Real de minas",
     "telephone": 4123564,
     "status": "En Venta",
 
 };
-let firstHouse;
+var resident = {
+
+    "residents": {
+        "name": "Andrea",
+        "FLastName": "Garza",
+        "MLastName": "Berrones",
+        "age": 23,
+        "email": "andrea_berrones@gmail.com",
+        "celphone": 6142338765.0,
+        "sex": "F"
+    }
+
+};
+var payment = {
+
+    "payments": {
+        "amount": 300,
+        "reason": "December"
+    }
+
+};
 
 
 describe(endpointUrl, () => {
@@ -30,19 +49,6 @@ describe(endpointUrl, () => {
 
         expect(response.statusCode).toBe(200);
     });
-    /*It test the update function, each value that was on the database
-    and coments that were just add */
-    it("PUT " + endpointUrl, async () => {
-        const res = await request(app)
-            .put(endpointUrl + newHouseId)
-            .send(testHouse);
-        expect(res.statusCode).toBe(200);
-        expect(res.body.houseNumber).toBe(testHouse.houseNumber);
-        expect(res.body.status).toBe(testHouse.status);
-        expect(res.body.street).toStrictEqual(testHouse.street);
-        expect(res.body.telephone).toBe(testHouse.telephone);
-
-    });
 
     //Test to get all houses
     test("GET " + endpointUrl, async () => {
@@ -56,6 +62,24 @@ describe(endpointUrl, () => {
     test("GET by Id " + endpointUrl + "5ded68af70aad948c202af67", async () => {
         const response = await request(app).get(endpointUrl + "5ded68af70aad948c202af67");
         expect(response.statusCode).toBe(200);
+
+    });
+    /*It test the payment function*/
+    it("PUT " + endpointUrl, async () => {
+        const res = await request(app)
+            .put(endpointUrl + "5ded68af70aad948c202af67" + "/payments")
+            .send(payment);
+        expect(res.statusCode).toBe(200);
+
+
+    });
+    /*It test the payment function*/
+    it("PUT " + endpointUrl, async () => {
+        const res = await request(app)
+            .put(endpointUrl + "5ded68af70aad948c202af67" + "/residents")
+            .send(resident);
+        expect(res.statusCode).toBe(200);
+
 
     });
 

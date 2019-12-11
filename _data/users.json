@@ -1,12 +1,6 @@
 [
 
-	{
-		"_id": "5c8a1d5b0190b214360dc036",
-		"name": "Jerry Wiliams",
-		"email": "jerry@gmail.com",
-		"role": "user",
-		"password": "123456"
-	},
+
 	{
 		"_id": "5c8a1d5b0190b214360dc037",
 		"name": "Maggie Johnson",
