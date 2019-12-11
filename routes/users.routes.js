@@ -19,8 +19,6 @@ const {
   authorize
 } = require('../middleware/auth');
 
-router.use(protect);
-router.use(authorize('user'));
 
 router
   .route('/')

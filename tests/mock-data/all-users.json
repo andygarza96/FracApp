@@ -1,0 +1,38 @@
+[
+
+    {
+        "_id": "5c8a1d5b0190b214360dc036",
+        "name": "Jerry Wiliams",
+        "email": "jerry@gmail.com",
+        "role": "user",
+        "password": "123456"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360dc037",
+        "name": "Maggie Johnson",
+        "email": "maggie@gmail.com",
+        "role": "user",
+        "password": "123456"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360dc038",
+        "name": "Barry Dickens",
+        "email": "barry@gmail.com",
+        "role": "user",
+        "password": "123456"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360dc039",
+        "name": "Ryan Bolin",
+        "email": "ryan@gmail.com",
+        "role": "user",
+        "password": "123456"
+    },
+    {
+        "_id": "5c8a1d5b0190b214360dc040",
+        "name": "Sara Kensing",
+        "email": "sara@gmail.com",
+        "role": "user",
+        "password": "123456"
+    }
+]
