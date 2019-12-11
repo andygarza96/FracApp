@@ -15,8 +15,6 @@ const {
 
 
 router.post("/", newsController.createNews);
-router.get("/:newsId", newsController.getNewsById);
 router.get("/", advancedResults(newsModel), newsController.getNews);
-router.put("/:newsId", newsController.updateNews);
-router.delete("/:newsId" /*, protect, authorize('user')*/ , newsController.deleteNews);
+
 module.exports = router;

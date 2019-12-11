@@ -13,8 +13,6 @@ const {
 
 router.post("/", carController.createCar);
 router.get("/", advancedResults(carModel), carController.getCars);
-router.get("/:carId", carController.getCarById);
-router.delete("/:carId", carController.deleteCar);
 
 
 module.exports = router;

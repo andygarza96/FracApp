@@ -1,0 +1,53 @@
+[
+    [{
+        "_id": "5ded80af75d4134ba141441c",
+        "licensePlate": "CCCC-CCC-CC",
+        "color": "Black",
+        "year": 2019,
+        "brand": "Volkswagen",
+        "model": "Jetta",
+        "house": 10,
+        "timeOfEntry": "2019-12-08T23:01:03.728Z",
+        "__v": 0
+    }, {
+        "_id": "5ded80f575d4134ba141441d",
+        "licensePlate": "XXXX-XXX-XX",
+        "color": "Red",
+        "year": 2010,
+        "brand": "Nissan",
+        "model": "Sentra",
+        "house": 7,
+        "timeOfEntry": "2019-12-08T23:02:13.958Z",
+        "__v": 0
+    }, {
+        "_id": "5ded812275d4134ba141441e",
+        "licensePlate": "MMMM-MMM-MM",
+        "color": "Red",
+        "year": 2013,
+        "brand": "Nissan",
+        "model": "Sentra",
+        "house": 8,
+        "timeOfEntry": "2019-12-08T23:02:58.204Z",
+        "__v": 0
+    }, {
+        "_id": "5ded81a15b096c4baec2b241",
+        "licensePlate": "LLLL-LLL-LL",
+        "color": "Blue",
+        "year": 2017,
+        "brand": "Ford",
+        "model": "focus",
+        "house": 4,
+        "timeOfEntry": "2019-12-08T23:05:05.793Z",
+        "__v": 0
+    }, {
+        "_id": "5ded81e75b096c4baec2b242",
+        "licensePlate": "PPPP-PPP-PP",
+        "color": "white",
+        "year": 2017,
+        "brand": "Ford",
+        "model": "focus",
+        "house": 6,
+        "timeOfEntry": "2019-12-08T23:06:15.928Z",
+        "__v": 0
+    }]
+]

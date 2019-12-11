@@ -11,12 +11,10 @@ const {
     authorize
 } = require('../middleware/auth');
 
-router.post("/", houseController.createHouse);
-router.get("/", houseController.getHouses);
+
+router.get("/", advancedResults(houseModel), houseController.getHouses);
 router.get("/:houseId", houseController.getHouseById);
-router.put("/:houseId", houseController.updateHouse);
 router.put("/:houseId/residents", houseController.addResident);
 router.put("/:houseId/payments", houseController.addPayments);
-router.delete("/:houseId", houseController.deleteHouse);
 
 module.exports = router;

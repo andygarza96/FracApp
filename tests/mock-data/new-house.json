@@ -1,8 +1,11 @@
 {
-    "name": "Oatmeal",
-    "description": "Delicious Oatmeal with blueberries",
-    "category": ["Breakfast"],
-    "image": "image-url",
-    "ingredients": ["1/4 a cup of Oatmeal", "1/2 a cup of milk", "sugar to taste", "Pinch of salt", "blueberries to taste"],
-    "instructions": ["First you put the milk on the stove", "Second you put the oatmeal", "add sugar and salt "]
+    "inDebt": false,
+    "_id": "5deed754e66e9b56b4bb511b",
+    "houseNumber": 10,
+    "street": "Real de minas",
+    "telephone": 4123564,
+    "status": "En Venta",
+    "residents": [],
+    "payments": [],
+    "__v": 0
 }

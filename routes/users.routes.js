@@ -25,12 +25,6 @@ router.use(authorize('user'));
 router
   .route('/')
   .get(advancedResults(User), getUsers)
-  .post(createUser);
-
-router
-  .route('/:id')
-  .get(getUser)
-  .put(updateUser)
-  .delete(deleteUser);
+//.post(createUser);
 
 module.exports = router;
