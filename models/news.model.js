@@ -20,9 +20,6 @@ const NewsSchema = new mongoose.Schema({
         default: Date.now,
         required: true
 
-    },
-    house: {
-        type: ObjectId
     }
 });
 
